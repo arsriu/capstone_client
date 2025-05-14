@@ -1,0 +1,65 @@
+name: capstone
+description: "A new Flutter project."
+version: 1.0.0+1
+
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.5  # Downgraded to resolve the version conflict
+  html: ^0.15.0
+  geolocator: ^13.0.1
+  geolocator_web: ^4.1.1  # Upgraded to resolve the version conflict
+  web_socket_channel: ^3.0.1
+  url_launcher: ^6.0.20  # Added url_launcher to enable clickable URLs
+  webview_flutter: ^3.0.0
+  intl: ^0.19.0
+  flutter_map: ^4.0.0  # Added flutter_map dependency
+  latlong2: ^0.8.1     # Added latlong2 for handling latitude and longitude
+  flutter_native_splash: ^2.0.0  # Added flutter_native_splash for splash screen
+  flutter_localizations:  # Added localization support for Korean and other languages
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/kakaopay_guide_image1.png
+    - assets/kakaopay_guide_image2.png    
+    - assets/kakaopay_guide_image3.png
+    - assets/goat_logo.png
+    - assets/goat_logo_splash.png
+    - assets/goat_logo_home.png
+    - assets/goat_logo_home_page.png
+    - assets/taxi_splash.png
+    - assets/quick_match_logo.png
+    - assets/no_rooms.png
+  fonts:
+      - family: LeagueScript
+        fonts:
+          - asset: assets/fonts/LeagueScript-Regular.ttf
+      - family: NanumBrushScript
+        fonts:
+          - asset: assets/fonts/NanumBrushScript-Regular.ttf
+      - family: CrimsonText
+        fonts:
+          - asset: assets/fonts/CrimsonText-Bold.ttf
+          - asset: assets/fonts/CrimsonText-BoldItalic.ttf
+          - asset: assets/fonts/CrimsonText-Italic.ttf
+          - asset: assets/fonts/CrimsonText-Regular.ttf
+          - asset: assets/fonts/CrimsonText-SemiBold.ttf
+          - asset: assets/fonts/CrimsonText-SemiBoldItalic.ttf
+
+flutter_native_splash:
+  color: "#42a5f5"  # Splash background color in hex format
+  image: assets/goat_logo.jpeg  # Corrected path to splash image
+  android: true
+  ios: true
+  fullscreen: true  # Enable full screen splash on both iOS and Android
